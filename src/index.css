@@ -1,0 +1,15 @@
+/**
+ * Mahaveer Developers & Construction
+ * Central Global Stylesheet Entry Point
+ */
+
+@import './styles/variables.css';
+@import './styles/reset.css';
+@import './styles/utilities.css';
+
+/* Root Mount Point */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

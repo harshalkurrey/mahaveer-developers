@@ -1,0 +1,151 @@
+/**
+ * Mahaveer Developers & Construction
+ * Design Token System (CSS Custom Properties)
+ * Updated Design Direction: Pure White Primary Background (#FFFFFF)
+ */
+
+:root {
+  /* ==========================================================================
+     1. Color Palette
+     ========================================================================== */
+  
+  /* Core Brand Colors */
+  --color-white: #FFFFFF;         /* Primary canvas across the entire website */
+  --color-navy: #0B132B;          /* Primary anchor: Headings, primary text, brand authority */
+  --color-slate: #1C2541;         /* Secondary text, subheadings, subtle accents */
+  --color-gold: #C59B27;          /* Warm construction ochre / gold: CTA buttons & highlights */
+  --color-off-white: #F8FAFC;     /* Subtle light tint for specific small elements */
+
+  /* Supporting Tonal Variations */
+  --color-navy-dark: #060B18;
+  --color-navy-light: #162248;
+  --color-slate-light: #2A3656;
+  --color-gold-hover: #A67C1E;
+  --color-gold-subtle: #FDF8ED;   /* Champagne tint for badges & callouts */
+  --color-gold-light: #D4AF37;
+
+  /* Semantic Surface Mappings - Pure White Canvas */
+  --color-surface-bg: #FFFFFF;    /* Pure White primary background across entire site */
+  --color-surface-card: #FFFFFF;  /* Pure White for cards with subtle border & shadow separation */
+  --color-surface-muted: #F8FAFC; /* Clean, subtle tint for inputs / small badges */
+
+  /* Typography Colors */
+  --color-text-primary: #0B132B;   /* Deep Navy for maximum legibility and authority */
+  --color-text-secondary: #334155; /* Slate for body copy and specifications */
+  --color-text-muted: #64748B;     /* Meta notes, labels, breadcrumbs */
+  --color-text-inverse: #FFFFFF;   /* White text on gold / solid buttons */
+  --color-text-gold: var(--color-gold);
+
+  /* Subtle Borders & Visual Separation */
+  --color-border-light: #E2E8F0;  /* Standard subtle architectural border */
+  --color-border-subtle: #F1F5F9; /* Very soft inner divider */
+  --color-border-accent: rgba(197, 155, 39, 0.35); /* Subtle gold border accent */
+
+  /* Status Colors */
+  --color-success: #15803D;        /* Emerald for WhatsApp & verification */
+  --color-error: #B91C1C;
+  --color-warning: #B45309;
+  --color-info: #0284C7;
+
+  /* ==========================================================================
+     2. Typography Tokens
+     ========================================================================== */
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-md: 1.125rem;    /* 18px */
+  --font-size-lg: 1.25rem;     /* 20px */
+  --font-size-xl: 1.5rem;      /* 24px */
+  --font-size-2xl: 1.875rem;   /* 30px */
+  --font-size-3xl: 2.25rem;    /* 36px */
+  --font-size-4xl: 3rem;       /* 48px */
+  --font-size-5xl: 3.75rem;    /* 60px */
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-none: 1;
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.65;
+
+  /* ==========================================================================
+     3. Spacing Scale - 8pt Base System
+     ========================================================================== */
+  --spacing-1: 0.25rem;   /* 4px */
+  --spacing-2: 0.5rem;    /* 8px */
+  --spacing-3: 0.75rem;   /* 12px */
+  --spacing-4: 1rem;      /* 16px */
+  --spacing-5: 1.25rem;   /* 20px */
+  --spacing-6: 1.5rem;    /* 24px */
+  --spacing-8: 2rem;      /* 32px */
+  --spacing-10: 2.5rem;   /* 40px */
+  --spacing-12: 3rem;     /* 48px */
+  --spacing-16: 4rem;     /* 64px */
+  --spacing-20: 5rem;     /* 80px */
+  --spacing-24: 6rem;     /* 96px */
+  --spacing-32: 8rem;     /* 128px */
+
+  /* ==========================================================================
+     4. Border Radius
+     ========================================================================== */
+  --radius-none: 0;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ==========================================================================
+     5. Container Widths & Responsive Layout
+     ========================================================================== */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+  --container-max: 1280px;
+
+  --container-padding-mobile: 1rem;   /* 16px */
+  --container-padding-tablet: 1.5rem; /* 24px */
+  --container-padding-desktop: 2rem;  /* 32px */
+
+  /* Section Vertical Rhythm */
+  --section-padding-y-mobile: 3.5rem; /* 56px */
+  --section-padding-y-desktop: 5rem;  /* 80px */
+
+  /* ==========================================================================
+     6. Shadows & Visual Separation on White
+     ========================================================================== */
+  --shadow-sm: 0 1px 3px 0 rgba(11, 19, 43, 0.04), 0 1px 2px 0 rgba(11, 19, 43, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(11, 19, 43, 0.06), 0 2px 4px -1px rgba(11, 19, 43, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(11, 19, 43, 0.06), 0 4px 6px -2px rgba(11, 19, 43, 0.02);
+  --shadow-xl: 0 20px 25px -5px rgba(11, 19, 43, 0.08), 0 10px 10px -5px rgba(11, 19, 43, 0.03);
+
+  /* ==========================================================================
+     7. Transitions & Layering (Z-Index)
+     ========================================================================== */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  --z-base: 1;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-toast: 1060;
+}

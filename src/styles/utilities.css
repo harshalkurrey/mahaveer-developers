@@ -1,0 +1,115 @@
+/**
+ * Foundational Layout & Responsive Utilities
+ * Primary Background: Pure White (#FFFFFF)
+ */
+
+/* Container System */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-mobile);
+  padding-right: var(--container-padding-mobile);
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: var(--container-padding-tablet);
+    padding-right: var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: var(--container-padding-desktop);
+    padding-right: var(--container-padding-desktop);
+  }
+}
+
+.container-narrow {
+  max-width: var(--container-md);
+}
+
+.container-wide {
+  max-width: var(--container-2xl);
+}
+
+/* Section Wrapper Utilities */
+.section {
+  padding-top: var(--section-padding-y-mobile);
+  padding-bottom: var(--section-padding-y-mobile);
+  background-color: var(--color-surface-bg);
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-top: var(--section-padding-y-desktop);
+    padding-bottom: var(--section-padding-y-desktop);
+  }
+}
+
+/* Visual Separation Helpers (White-on-White Architecture) */
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.card-bordered {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card-bordered:hover {
+  border-color: var(--color-border-accent);
+  box-shadow: var(--shadow-md);
+}
+
+/* Divider Line */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border-light);
+}
+
+/* Flexbox Helpers */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Grid Helpers */
+.grid {
+  display: grid;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

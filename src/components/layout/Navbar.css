@@ -1,0 +1,547 @@
+/**
+ * Navbar & Mobile Drawer Styles
+ * Mahaveer Developers & Construction
+ * Design Direction: Pure White Background (#FFFFFF)
+ */
+
+.navbar-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-sticky);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border-light);
+  transition: box-shadow var(--transition-base);
+}
+
+.navbar-header.is-scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================================
+   1. Topbar (White Utility Strip)
+   ========================================================================== */
+.topbar {
+  background-color: var(--color-white);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  border-bottom: 1px solid var(--color-border-subtle);
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .topbar {
+    display: none; /* Hidden on mobile to preserve vertical viewport */
+  }
+}
+
+.topbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--spacing-2);
+  padding-bottom: var(--spacing-2);
+}
+
+.topbar-left,
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.topbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.topbar-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.topbar-link {
+  transition: color var(--transition-fast);
+}
+
+.topbar-link:hover {
+  color: var(--color-navy);
+}
+
+.topbar-whatsapp {
+  color: var(--color-success);
+  font-weight: var(--font-weight-semibold);
+}
+
+.topbar-whatsapp:hover {
+  color: #166534;
+}
+
+.topbar-divider {
+  color: var(--color-border-light);
+}
+
+/* ==========================================================================
+   2. Main Navbar Bar
+   ========================================================================== */
+.navbar {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Logo (Text-based with Monogram) */
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  text-decoration: none;
+}
+
+.brand-monogram {
+  width: 42px;
+  height: 42px;
+  background-color: var(--color-navy);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+  border: 1px solid var(--color-border-accent);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.navbar-brand:hover .brand-monogram {
+  transform: translateY(-1px);
+  border-color: var(--color-gold);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-navy);
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+}
+
+.brand-subtitle {
+  font-family: var(--font-heading);
+  font-size: 0.625rem; /* 10px */
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gold);
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+/* Desktop Navigation Links */
+.navbar-links {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-6);
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .navbar-links {
+    display: flex;
+  }
+}
+
+.navbar-item {
+  list-style: none;
+}
+
+.navbar-link {
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: var(--spacing-2) 0;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.navbar-link:hover {
+  color: var(--color-navy);
+}
+
+/* Active Indicator */
+.navbar-link.is-active {
+  color: var(--color-navy);
+  font-weight: var(--font-weight-semibold);
+}
+
+.navbar-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-gold);
+  border-radius: var(--radius-full);
+}
+
+/* Action Button ("Enquire Now") */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.btn-enquire {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.02em;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-enquire:hover {
+  background-color: var(--color-gold-hover);
+  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.btn-arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+
+.btn-enquire:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+@media (max-width: 640px) {
+  .navbar-actions .btn-enquire {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   3. Mobile Hamburger Button
+   ========================================================================== */
+.hamburger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+@media (min-width: 1024px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+.hamburger-btn:hover {
+  background-color: var(--color-surface-muted);
+  border-color: var(--color-border-accent);
+}
+
+.hamburger-box {
+  width: 22px;
+  height: 14px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-navy);
+  border-radius: 2px;
+  position: absolute;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.hamburger-inner {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: '';
+  left: 0;
+}
+
+.hamburger-inner::before {
+  top: -6px;
+}
+
+.hamburger-inner::after {
+  bottom: -6px;
+}
+
+/* Hamburger Active / Open State */
+.hamburger-btn.is-open .hamburger-inner {
+  background-color: transparent;
+}
+
+.hamburger-btn.is-open .hamburger-inner::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger-btn.is-open .hamburger-inner::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ==========================================================================
+   4. Mobile Navigation Drawer
+   ========================================================================== */
+.drawer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(11, 19, 43, 0.45);
+  backdrop-filter: blur(4px);
+  z-index: var(--z-modal-backdrop);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.drawer-backdrop.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 340px;
+  height: 100vh;
+  height: 100dvh;
+  background-color: var(--color-white);
+  z-index: var(--z-modal);
+  transform: translateX(100%);
+  transition: transform var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-xl);
+  border-left: 1px solid var(--color-border-light);
+}
+
+.mobile-drawer.is-open {
+  transform: translateX(0);
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-5) var(--spacing-6);
+  border-bottom: 1px solid var(--color-border-light);
+  background-color: var(--color-white);
+}
+
+.drawer-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.drawer-close-btn:hover {
+  color: var(--color-navy);
+  border-color: var(--color-navy);
+}
+
+.drawer-close-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.mobile-drawer-body {
+  padding: var(--spacing-6);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-6);
+  background-color: var(--color-white);
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-item {
+  list-style: none;
+}
+
+.mobile-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-3) var(--spacing-4);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-navy);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  text-decoration: none;
+}
+
+.mobile-link:hover {
+  background-color: var(--color-surface-muted);
+  border-color: var(--color-border-light);
+  color: var(--color-navy);
+}
+
+.mobile-link.is-active {
+  background-color: var(--color-gold-subtle);
+  border-color: var(--color-border-accent);
+  color: var(--color-gold-hover);
+  font-weight: var(--font-weight-semibold);
+}
+
+.mobile-link-arrow {
+  width: 18px;
+  height: 18px;
+  color: var(--color-text-muted);
+}
+
+.mobile-link:hover .mobile-link-arrow {
+  color: var(--color-gold);
+}
+
+.mobile-drawer-cta {
+  margin-top: auto;
+}
+
+.btn-enquire-full {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  font-size: var(--font-size-base);
+}
+
+/* Mobile Contact Details Card */
+.mobile-drawer-contact {
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.mobile-contact-title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-1);
+}
+
+.mobile-contact-text {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-3);
+}
+
+.mobile-contact-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2);
+}
+
+.mobile-contact-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-navy);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.mobile-contact-pill:hover {
+  border-color: var(--color-navy);
+  background-color: var(--color-surface-muted);
+}
+
+.mobile-contact-pill svg {
+  width: 14px;
+  height: 14px;
+}
+
+.mobile-contact-pill.whatsapp-pill {
+  color: var(--color-success);
+  border-color: rgba(21, 128, 61, 0.25);
+}
+
+.mobile-contact-pill.whatsapp-pill:hover {
+  border-color: var(--color-success);
+  background-color: #F0FDF4;
+}

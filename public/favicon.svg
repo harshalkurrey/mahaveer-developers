@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#0B132B"/>
+  <!-- Architectural M Geometry in Gold -->
+  <path d="M14 46V18L26 34L32 26L38 34L50 18V46H42V31L34 41L32 38L30 41L22 31V46H14Z" fill="#C59B27"/>
+  <rect x="29" y="44" width="6" height="2" rx="1" fill="#FFFFFF" opacity="0.8"/>
+</svg>

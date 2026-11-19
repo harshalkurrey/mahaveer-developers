@@ -1,0 +1,41 @@
+/**
+ * Main Layout Shell Styles
+ * Mahaveer Developers & Construction
+ */
+
+.main-layout {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface-bg);
+  position: relative;
+}
+
+/* Accessibility: Skip to Content */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: var(--spacing-4);
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+  padding: var(--spacing-2) var(--spacing-4);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  transition: top var(--transition-fast);
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  top: var(--spacing-4);
+}
+
+/* Page Content Container */
+.main-content {
+  flex: 1 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
